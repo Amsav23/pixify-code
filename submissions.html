@@ -7,12 +7,14 @@
     <title>Pixify Submissions Page</title>
 </head>
 <body>
-    <header>
-        <h1><a href="/assets/PIXIFY.png"></a></h1>
-        <a href="submissions.html">2023 Submissions</a>
-        <a href="about.html">About</a>
-        <a href="darkmode.html">Dark Mode</a>
-    </header>
+    <nav>
+        <h1><a href="index.html">PIXIFY</a></h1>
+            <div>
+                <a href="submissions.html">2023 Submissions</a>
+                <a href="about.html">About</a>
+                <button>Dark Mode</button>
+            </div>
+    </nav>
     <div class="submissions-page">
         <div class="title-container">
             <h2>2023 SUBMISSIONS</h2>
@@ -28,14 +30,14 @@
         <div class="submit-work">
             <h3 id="title">SUBMIT YOUR WORK</h3>
             <form id="form-container">
-                <input placeholder="Your Name" id="input-name" type="text" required />
-                <input placeholder="Title of Your Entry" id="input-name" type="text" required />
-                <input placeholder="Image Url One" id="input-url" type="url" required />
-                <input placeholder="Image Url Two" id="input-url" type="url" required />
-                <input placeholder="Image Url Three" id="input-url" type="url" required />
-                <input placeholder="Image Url Four" id="input-url" type="url" required />
-                <input placeholder="Image Url Five" id="input-url" type="url" required />
-                <button type="submit" value="Submit">Submit</button>
+                <input placeholder="Your Name" id="input-name" name="name" type="text" required />
+                <input placeholder="Title of Your Entry" id="input-name" name="title" type="text" required />
+                <input placeholder="Image Url One" id="input-url" name="image1" type="text" required />
+                <input placeholder="Image Url Two" id="input-url" name="image2" type="text" required />
+                <input placeholder="Image Url Three" id="input-url" name="image3" type="text" required />
+                <input placeholder="Image Url Four" id="input-url" name="image4" type="text" required />
+                <input placeholder="Image Url Five" id="input-url" name="image5" type="text" required />
+                <button type="submit" id="submit-btn" value="Submit">Submit</button>
             </form>
         </div>
     </div>
