@@ -1,0 +1,14 @@
+const imageSets = [
+    {
+        id:1,
+        name: "Jane Doe",
+        title: "Nature Adventures",
+        images: [
+            <img src="/assets/david-marcu-78A265wPiO4-unsplash 1.png">
+            ],
+    }
+
+    {
+        
+    }
+]
