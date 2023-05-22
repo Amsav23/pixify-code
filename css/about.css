@@ -3,38 +3,65 @@ main {
     height: 100%;
 }
 
+.main-container {
+    border: 5px solid orange;
+    display: flex;
+    margin: 0 20px;
+}
+
 h1 {
     border: 5px solid blue;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
 header {
     border: 5px solid green;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0 100px 0;
+    margin: 0 20px;
 }
 
 .main-left {
     border: 5px solid purple;
     display: flex;
     flex-direction: column;
-    /*justify-content: flex-start;*/
-    width: 50%;
-    height: 60%;
+    gap: 50px;
+
+    width: 70%;
 }
 
 p {
-    color: blue;
+    
 }
 
 .main-right {
     border: 5px solid pink;
     display: flex;
     justify-content: flex-end;
-    position: absolute;
-    width: 50%;
-    height: 60%;
+    width: 30%;
+
 }
 
-img {
+.main-right img {
+    border: 5px solid black;
+    height: 100%;
+    width: 85%;
+}
 
-    height: 40%;
+.submit-btn {
+    /*position: absolute;
+    bottom: 30px;
+    right: 30px;*/
+    height: 15%;
     width: 30%;
+    border-radius: 100px;
+    background-color: #36454f;
+    color: #7fffd4;
+    letter-spacing: 1px;
+    border: none;
+    font-size: 170%;
 }
