@@ -9,7 +9,6 @@ body, html {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 nav {
     display: flex;
     background-color: #36454f;
@@ -20,7 +19,6 @@ nav {
 .nav-left {
     font-size: 200%;
     margin-left: 15px;
-  
 }
 
 .nav-left a {
@@ -48,7 +46,6 @@ img {
     height: 100%;
     width: 100%;
 }
-
 
 .bottom-left {
     height: 45%;
