@@ -4,6 +4,36 @@
     box-sizing: border-box;
 }
 
-.container {
+body, html {
+    height: 100%;
+}
 
+.bg {
+    background-image: url("/assets/homepage.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+
+}
+
+.nav-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+}
+
+
+.bottom-left {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
 }
