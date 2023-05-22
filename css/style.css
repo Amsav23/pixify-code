@@ -6,15 +6,9 @@
 
 body, html {
     height: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.bg {
-    background-image: url("/assets/homepage.jpg");
-    height: 50%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
 
 nav {
     display: flex;
@@ -28,12 +22,32 @@ nav {
 
 .container {
     position: relative;
+    height: 100%;
+    /*width: 100%;*/
+
     text-align: center;
+}
+
+img {
+    height: 100%;
+    width: 100%;
 }
 
 
 .bottom-left {
+    height: 45%;
+    width: 45%;
+    font-size: 170%;
+    padding: 42px;
+    border-radius: 100px 100px 100px 5px;
+    background-color: #36454f;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+}
+
+.bottom-right {
     position: absolute;
     bottom: 8px;
-    left: 16px;
+    right: 16px;
 }
