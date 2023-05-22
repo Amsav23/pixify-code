@@ -29,6 +29,8 @@ nav {
 .nav-right {
     margin-right: 15px;
     padding-top: 10px;
+    display: flex;
+    gap: 50px;
 }
 
 a {
