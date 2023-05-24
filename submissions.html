@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/submissions.css">
     <link rel="next" href="./about.html">
     <link rel="next" href="./index.html">
     <title>Pixify Submissions Page</title>
@@ -20,6 +21,43 @@
             <button class="theme-btn">Dark Mode</button>
         </div>
     </nav>
+
+    <header>
+        <div class="submissions-container">
+            <h2>2023 SUBMISSIONS</h2>
+        </div>
+    </header>
+
+    <main>
+
+        <div id="meals-container"></div>
+        <form id="add-meal-form">
+            <h2>Add a new meal</h2>
+            <div class="input-container">
+                <label for="name">Name:</label>
+                <input type="text" name="name" placeholder="Enter meal name" required>
+            </div>
+            <div class="input-container">
+                <label for="imageUrl">Image URL:</label>
+                <input type="text" name="imageUrl" placeholder="Enter imageUrl" required>
+            </div>
+            <div class="input-container">
+                <label for="category">Category</label>
+                <select id="form-select" required>
+                    <option value="">Select a category</option>
+                </select>
+            </div>
+            <button type="submit" id="submit-btn">Submit</button>
+          </form>
+    </main>
+
+    <footer>
+
+    </footer>
+
+
+
+
 
     <div class="submissions-page">
         <div class="title-container">
@@ -47,5 +85,7 @@
             </form>
         </div>
     </div>
+
+    <script src="scripts/script.js"></script>
 </body>
 </html>
