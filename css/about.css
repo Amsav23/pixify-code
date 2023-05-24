@@ -1,32 +1,32 @@
+.nav-right {
+    margin-right: 65px;
+}
+
 main {
-    border: 5px solid red;
     height: 100%;
 }
 
 .main-container {
-    border: 5px solid orange;
     display: flex;
-    margin: 0 20px;
+    margin: 0 60px;
 }
 
 h1 {
-    border: 5px solid blue;
     display: flex;
     justify-content: center;
     padding: 20px;
 }
 
 header {
-    border: 5px solid green;
     display: flex;
     justify-content: center;
     text-align: center;
     padding: 20px 0 100px 0;
-    margin: 0 20px;
+    margin: 0 60px;
+    font-size: 20px;
 }
 
 .main-left {
-    border: 5px solid purple;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -35,27 +35,23 @@ header {
 }
 
 p {
-    
+    font-size: 20px;  
 }
 
 .main-right {
-    border: 5px solid pink;
     display: flex;
     justify-content: flex-end;
     width: 30%;
-
+    padding-bottom: 100px;
 }
 
 .main-right img {
-    border: 5px solid black;
-    height: 100%;
-    width: 85%;
+    border-radius: 10px;
+    height: 103%;
+    width: 95%;
 }
 
 .submit-btn {
-    /*position: absolute;
-    bottom: 30px;
-    right: 30px;*/
     height: 15%;
     width: 30%;
     border-radius: 100px;
