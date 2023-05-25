@@ -2,9 +2,24 @@
     margin-right: 65px;
 }
 
-header {
-    display: flex;
+.theme-btn {
+    color: #7fffd4;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    margin-bottom: 7px;
+    cursor: pointer;
+}
 
+h2 {
+    display: flex;
+    justify-content: center;
+    /*font-family: ;*/
+    border: 1px solid orange;
+}
+
+h3 {
+    font-size: 25px;
 }
 
 main {
@@ -13,8 +28,11 @@ main {
 
 #submit-form {
     border: 5px solid blue;
+    color: white;
+    background-color: #36454f;
     width: 40%;
     padding: 10px 50px;
+    margin-bottom: 270px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -37,11 +55,13 @@ main {
     height: 60px;
     width: 180px;
     border-radius: 50px;
-    background-color: #36454f;
+    background-color: transparent;
     color: #7fffd4;
     letter-spacing: 1px;
     border: 1px solid #7fffd4;
     font-size: 17px;
+    cursor: pointer;
+    margin-top: 30px;
 }
 
 #submissions-container {
