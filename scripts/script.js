@@ -51,3 +51,29 @@ const imageSets = [
   ];
 
   const display 
+
+
+
+const themeButton=document.querySelector(".theme-btn")
+const toggleTheme=()=>{
+  const body = document.querySelector("body")
+  const btnContainer = document.querySelector(".buttons-container") 
+  const submissionsName = document.querySelector(".current-submissions-info") 
+
+  if(body.style.backgroundColor==="black"){
+    body.style.backgroundColor="white"
+    themeButton.innerHTML="Dark Mode"
+ 
+    btnContainer.querySelector("button").style.color = "black";
+    btnContainer.querySelector("a").style.color = "black";
+  }else{
+    body.style.backgroundColor="black"
+    themeButton.innerHTML="Light Mode"
+
+    btnContainer.querySelector("button").style.color = "white";
+    btnContainer.querySelector("a").style.color = "white";
+    submissionsName.querySelector("h3").style.color = "white";
+  }
+
+}
+themeButton.onclick=toggleTheme;
