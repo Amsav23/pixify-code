@@ -77,7 +77,6 @@ window.onload = function () {
   currentId = urlParams.get('id');
   const currentimageSet = imageSets.filter(item => item.id == currentId);
   currentTitle = currentimageSet[0].title;
-  const imageSet = <div class="current-imageSet">
-    <div class="current-imageSet-info">
-
 }
+
+
