@@ -26,6 +26,14 @@
     <main>
         <div id="submissions-container">
             <h2>2023 SUBMISSIONS</h2>
+            <div class="photo">
+                <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
+                    <div class="photo-info">
+                        <p class="item-title">${item.title}</p>
+                        <p>${item.name}</p>
+                        <p>see more</p>
+                    </div>
+            </div>
         </div>
         
         <form id="submit-form">
@@ -70,5 +78,6 @@
 
 
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/script2.js"></script>
 </body>
 </html>
