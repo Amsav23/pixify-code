@@ -11,7 +11,7 @@ body, html {
 
 nav {
     display: flex;
-    background-color: #36454f;
+    background-color:rgb(42, 59, 73);
     justify-content: space-between;
     padding: 5px;
 }
@@ -55,7 +55,7 @@ img {
     font-size: 170%;
     padding: 42px;
     border-radius: 100px 100px 100px 5px;
-    background-color: #36454f;
+    background-color: rgb(42, 59, 73);
     color: white;
     position: absolute;
     bottom: 0px;
