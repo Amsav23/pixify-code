@@ -50,33 +50,47 @@ const imageSets = [
 
   ];
 
-const displayImage = (list) => {
 
-  const allPhotos = list.map((item) => {
-    return `<div class="photo">
-      <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
-      <div class="photo-info">
-        <p class="item-title">${item.title}</p>
-        <p>${item.name}</p>
-        <p>see more</p>
-      </div>
-    </div>`
-  });
-
-
+  function displaySubmissions() {
+    submissions.map(item => {
+        document.getElementById('submissions-container').innerHTML +=
+            `<a href="details.html?id=${item.id}">
+            <div class="submission-card">
+                <img src=${item.images[0]} alt=${item.name} class="submission-image" />
+                <div class="submission-text-container">
+                    <p class="submission-description">${item.title} - ${item.name}</p>
+                    <p class="submission-more-detail">see more</p>
+                </div>
+            </div>
+        </a>`
+    })
 }
 
+//const displayImage = (list) => {
+
+//  const allPhotos = list.map((item) => {
+//    return `<div class="photo">
+//      <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
+//      <div class="photo-info">
+//        <p class="item-title">${item.title}</p>
+//        <p>${item.name}</p>
+//        <p>see more</p>
+//      </div>
+//    </div>`
+//  });
+//}
 
 
 
-let currentId;
-let currentTitle;
 
-window.onload = function () {
-  const urlParams = new URLSearchParams(window.location.search);
-  currentId = urlParams.get('id');
-  const currentimageSet = imageSets.filter(item => item.id == currentId);
-  currentTitle = currentimageSet[0].title;
-}
+//let currentId;
+//let currentTitle;
+
+//window.onload = function () {
+  //const urlParams = new URLSearchParams(window.location.search);
+  //currentId = urlParams.get('id');
+  //const currentimageSet = imageSets.filter(item => item.id == currentId);
+  //currentTitle = currentimageSet[0].title;
+//}
 
 
