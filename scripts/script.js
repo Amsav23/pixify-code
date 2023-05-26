@@ -66,6 +66,10 @@ const imageSets = [
     })
 }
 
+window.onload = function() {
+  displaySubmissions();
+};
+
 //const displayImage = (list) => {
 
 //  const allPhotos = list.map((item) => {
