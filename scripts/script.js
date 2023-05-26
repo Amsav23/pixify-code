@@ -94,7 +94,7 @@ const displaySubmissions = (list) => {
         <p>see more</p>
       </div>
     </div>`
-  });
+  }).join("");
 
   submissionsContainer.innerHTML = allPhotos;
 }
