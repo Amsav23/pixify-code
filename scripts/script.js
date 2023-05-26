@@ -87,7 +87,7 @@ const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
   const allPhotos = list.map((item) => {
     return `<div class="photo">
-     <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
+     <img src=${item.images[0]} alt=${item.name} class="photo-image" />
     <div class="photo-info">
         <p class="item-title">${item.title}</p>
         <p>${item.name}</p>
