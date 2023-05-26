@@ -51,7 +51,19 @@ const imageSets = [
   ];
 
 
-  function displaySubmissions() {
+
+
+
+
+
+
+
+
+
+
+
+
+/*  function displaySubmissions() {
     submissions.map(item => {
         document.getElementById('submissions-container').innerHTML +=
             `<a href="details.html?id=${item.id}">
@@ -69,21 +81,27 @@ const imageSets = [
 window.onload = function() {
   displaySubmissions();
 };
+*/
 
-//const displayImage = (list) => {
+const displaySubmissions = (list) => {
+  const submissionsContainer = document.getElementById("submissions-container");
+  const allPhotos = list.map((item) => {
+    return `<div class="photo">
+     <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
+    <div class="photo-info">
+        <p class="item-title">${item.title}</p>
+        <p>${item.name}</p>
+        <p>see more</p>
+      </div>
+    </div>`
+  });
 
-//  const allPhotos = list.map((item) => {
-//    return `<div class="photo">
-//      <img src=${item.imageUrl} alt=${item.name} class="photo-image" />
-//      <div class="photo-info">
-//        <p class="item-title">${item.title}</p>
-//        <p>${item.name}</p>
-//        <p>see more</p>
-//      </div>
-//    </div>`
-//  });
-//}
+  submissionsContainer.innerHTML = allPhotos;
+}
 
+window.onload = function() {
+  displaySubmissions(imageSets);
+}
 
 
 
