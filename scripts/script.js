@@ -75,16 +75,17 @@ window.onload = function() {
 const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
   const allPhotos = list.map(item => {
-    return `<a href="details.html?id=${item.id}">
+    return `
     <div class="photo">
+    <a href="details.html?id=${item.id}">
     <img src=${item.images[0]} alt=${item.name} class="photo-image" />
+    </a>
     <div class="photo-info">
       <p class="item-title">${item.title}</p>
-      <p>${item.name}</p>
-      <p>see more</p>
+      <p class="item-name">${item.name}</p>
+      <p class="item-par">see more</p>
     </div>
-    </div>
-  </a>`
+    </div>`
 }).join("");
 
   submissionsContainer.innerHTML = allPhotos;

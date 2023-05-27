@@ -1,4 +1,4 @@
-const imageSets = [
+imageSets = [
     {
       id:1,  
       name: 'Andrew Smith',

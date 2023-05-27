@@ -33,7 +33,7 @@ nav {
     gap: 50px;
 }
 
-a {
+.nav-right a {
     text-decoration: none;
     color: white;
 }
