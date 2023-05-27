@@ -52,17 +52,6 @@ const imageSets = [
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /*  function displaySubmissions() {
     submissions.map(item => {
         document.getElementById('submissions-container').innerHTML +=
@@ -86,15 +75,17 @@ window.onload = function() {
 const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
   const allPhotos = list.map((item) => {
-    return `<div class="photo">
-     <img src=${item.images[0]} alt=${item.name} class="photo-image" />
+    return `<a href="details.html?id=${item.id}">
+    <div class="photo">
+    <img src=${item.images[0]} alt=${item.name} class="photo-image" />
     <div class="photo-info">
-        <p class="item-title">${item.title}</p>
-        <p>${item.name}</p>
-        <p>see more</p>
-      </div>
-    </div>`
-  }).join("");
+      <p class="item-title">${item.title}</p>
+      <p>${item.name}</p>
+      <p>see more</p>
+    </div>
+    </div>
+  </a>`
+}).join("");
 
   submissionsContainer.innerHTML = allPhotos;
 }
@@ -109,10 +100,22 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   const name = document.querySelector("input[name='name']").value;
-  const title = document.querySelector("input[name='name']").value;
+  const title = document.querySelector("input[name='title']").value;
   const imageUrl = document.querySelector("input[name='imageUrl']").value;
 
   console.log(name);
+
+
+  const newSubmission = document.createElement("div")
+  newSubmission.innerHTML = 
+  `<img src=${images[0]} alt=${name} class="photo-image" />
+    <div class="photo-info">
+      <p class="item-title">${title}</p>
+      <p>${name}</p>
+      <p>see more</p>
+    </div>`;
+
+    console.log(newSubmission);
 
 });
 
