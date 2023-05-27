@@ -1,4 +1,4 @@
-const imageSets = [
+/*const imageSets = [
     {
       id:1,  
       name: 'Andrew Smith',
@@ -50,104 +50,10 @@ const imageSets = [
 
   ];
 
-
-
-/*  function displaySubmissions() {
-    submissions.map(item => {
-        document.getElementById('submissions-container').innerHTML +=
-            `<a href="details.html?id=${item.id}">
-            <div class="submission-card">
-                <img src=${item.images[0]} alt=${item.name} class="submission-image" />
-                <div class="submission-text-container">
-                    <p class="submission-description">${item.title} - ${item.name}</p>
-                    <p class="submission-more-detail">see more</p>
-                </div>
-            </div>
-        </a>`
-    })
-}
-
 window.onload = function() {
-  displaySubmissions();
-};
-*/
+    const urlParams = new URLSearchParams(window.location.search0);
+    let currentId = urlParams.get('id');
 
-const displaySubmissions = (list) => {
-  const submissionsContainer = document.getElementById("submissions-container");
-  const allPhotos = list.map(item => {
-    return `<a href="details.html?id=${item.id}">
-    <div class="photo">
-    <img src=${item.images[0]} alt=${item.name} class="photo-image" />
-    <div class="photo-info">
-      <p class="item-title">${item.title}</p>
-      <p>${item.name}</p>
-      <p>see more</p>
-    </div>
-    </div>
-  </a>`
-}).join("");
-
-  submissionsContainer.innerHTML = allPhotos;
-}
-
-
-window.onload = function() {
-  displaySubmissions(imageSets);
-}
-
-const submitBtn = document.querySelector("#submit-btn");
-
-submitBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  const name = document.querySelector("input[name='name']").value;
-  const title = document.querySelector("input[name='title']").value;
-  let imageUrl = [];
-  imageUrl.push(document.querySelector("input[name='imageUrl-1']").value);
-  imageUrl.push(document.querySelector("input[name='imageUrl-2']").value);
-  imageUrl.push(document.querySelector("input[name='imageUrl-3']").value);
-  imageUrl.push(document.querySelector("input[name='imageUrl-4']").value);
-  imageUrl.push(document.querySelector("input[name='imageUrl-5']").value);
-
-  console.log(name);
-  console.log(title);
-  console.log(imageUrl);
-
-  const newSubmission = document.createElement("div")
-  newSubmission.innerHTML = 
-  `<img src=${imageUrl[0]} alt=${name} class="photo-image" />
-    <div class="photo-info">
-      <p class="item-title">${title}</p>
-      <p>${name}</p>
-      <p>see more</p>
-    </div>`;
-
-
-    const submissionsContainer = document.querySelector("#submissions-container");
-    submissionsContainer.insertBefore(newSubmission, submissionsContainer.firstChild);
-
-
-
-    document.querySelector("input[name='name']").value = "";
-    document.querySelector("input[name='title']").value = "";
-    document.querySelector("input[name='imageUrl-1']").value = "";
-    document.querySelector("input[name='imageUrl-2']").value = "";
-    document.querySelector("input[name='imageUrl-3']").value = "";
-    document.querySelector("input[name='imageUrl-4']").value = "";
-    document.querySelector("input[name='imageUrl-5']").value = "";
-
-});
-
-
-
-//let currentId;
-//let currentTitle;
-
-//window.onload = function () {
-  //const urlParams = new URLSearchParams(window.location.search);
-  //currentId = urlParams.get('id');
-  //const currentimageSet = imageSets.filter(item => item.id == currentId);
-  //currentTitle = currentimageSet[0].title;
-//}
-
-
+    const currentSubmission = imageSets.filter(item => item.id == currentId);
+    console.log(currentSubmission);
+}*/
