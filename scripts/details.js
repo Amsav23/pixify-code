@@ -1,4 +1,4 @@
-/*const imageSets = [
+const imageSets = [
     {
       id:1,  
       name: 'Andrew Smith',
@@ -51,9 +51,9 @@
   ];
 
 window.onload = function() {
-    const urlParams = new URLSearchParams(window.location.search0);
+    const urlParams = new URLSearchParams(window.location.search);
     let currentId = urlParams.get('id');
 
     const currentSubmission = imageSets.filter(item => item.id == currentId);
     console.log(currentSubmission);
-}*/
+}
