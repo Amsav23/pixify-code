@@ -109,7 +109,10 @@ submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
   const name = document.querySelector("input[name='name']").value;
-  const name = document.querySelector("input[name='imageUrl']").value;
+  const title = document.querySelector("input[name='name']").value;
+  const imageUrl = document.querySelector("input[name='imageUrl']").value;
+
+  console.log(name);
 
 });
 
