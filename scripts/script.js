@@ -101,21 +101,39 @@ submitBtn.addEventListener("click", (e) => {
 
   const name = document.querySelector("input[name='name']").value;
   const title = document.querySelector("input[name='title']").value;
-  const imageUrl = document.querySelector("input[name='imageUrl']").value;
+  let imageUrl = [];
+  imageUrl.push(document.querySelector("input[name='imageUrl-1']").value);
+  imageUrl.push(document.querySelector("input[name='imageUrl-2']").value);
+  imageUrl.push(document.querySelector("input[name='imageUrl-3']").value);
+  imageUrl.push(document.querySelector("input[name='imageUrl-4']").value);
+  imageUrl.push(document.querySelector("input[name='imageUrl-5']").value);
 
   console.log(name);
-
+  console.log(title);
+  console.log(imageUrl);
 
   const newSubmission = document.createElement("div")
   newSubmission.innerHTML = 
-  `<img src=${images[0]} alt=${name} class="photo-image" />
+  `<img src=${imageUrl[0]} alt=${name} class="photo-image" />
     <div class="photo-info">
       <p class="item-title">${title}</p>
       <p>${name}</p>
       <p>see more</p>
     </div>`;
 
-    console.log(newSubmission);
+
+    const submissionsContainer = document.querySelector("#submissions-container");
+    submissionsContainer.insertBefore(newSubmission, submissionsContainer.firstChild);
+
+
+
+    document.querySelector("input[name='name']").value = "";
+    document.querySelector("input[name='title']").value = "";
+    document.querySelector("input[name='imageUrl-1']").value = "";
+    document.querySelector("input[name='imageUrl-2']").value = "";
+    document.querySelector("input[name='imageUrl-3']").value = "";
+    document.querySelector("input[name='imageUrl-4']").value = "";
+    document.querySelector("input[name='imageUrl-5']").value = "";
 
 });
 
