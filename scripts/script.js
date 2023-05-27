@@ -74,7 +74,7 @@ window.onload = function() {
 
 const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
-  const allPhotos = list.map((item) => {
+  const allPhotos = list.map(item => {
     return `<a href="details.html?id=${item.id}">
     <div class="photo">
     <img src=${item.images[0]} alt=${item.name} class="photo-image" />
@@ -89,6 +89,7 @@ const displaySubmissions = (list) => {
 
   submissionsContainer.innerHTML = allPhotos;
 }
+
 
 window.onload = function() {
   displaySubmissions(imageSets);
