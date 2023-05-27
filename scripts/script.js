@@ -103,7 +103,15 @@ window.onload = function() {
   displaySubmissions(imageSets);
 }
 
+const submitBtn = document.querySelector("#submit-btn");
 
+submitBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const name = document.querySelector("input[name='name']").value;
+  const name = document.querySelector("input[name='imageUrl']").value;
+
+});
 
 //let currentId;
 //let currentTitle;
