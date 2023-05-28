@@ -1,4 +1,4 @@
-imageSets = [
+const imageSets = [
     {
       id:1,  
       name: 'Andrew Smith',
@@ -52,8 +52,21 @@ imageSets = [
 
 window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
-    let currentId = urlParams.get('id');
 
+    let currentId = urlParams.get('id');
     const currentSubmission = imageSets.filter(item => item.id == currentId);
     console.log(currentSubmission);
+
+    const detailImage = `<div class="current-submission">
+        <div class="current-submission-info">
+          <h2>${currentSubmission[0].title}</h2>
+          <p>${currentSubmission[0].name}</p>
+          <img src=${currentSubmission[0].images}</img>
+          <button type="button" id="previous-btn">Previous</button>
+          <button type="button" id="next-btn">Next</button>
+        </div>
+      </div>`
+
+      const imageContainer = document.querySelector(".details-container");
+      imageContainer.innerHTML = detailImage;
 }
