@@ -104,4 +104,28 @@ nextButton.addEventListener("click", () => {
     currentNumber.innerHTML = `${imageNumber +1} of ${currentSubmission[0].images.length}`;
 });
 
-}; 
+};
+
+
+ //THEME BUTTON//
+ themeButton = document.querySelector(".theme-btn");
+ toggleTheme = () => {
+ body = document.querySelector("body");
+ const subInfo = document.querySelector(".current-submission-info");
+
+
+  if(body.style.backgroundColor === "rgb(42, 59, 73)") {
+    body.style.backgroundColor = "white";
+    subInfo.style.color = "black";
+    themeButton.innerHTML = "Dark Mode";
+
+
+  } else {
+    body.style.backgroundColor = "rgb(42, 59, 73)";
+    subInfo.style.color = "white";
+    themeButton.innerHTML = "Light Mode";
+  }
+}
+
+
+themeButton.onclick = toggleTheme;

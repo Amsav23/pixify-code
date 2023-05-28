@@ -119,10 +119,9 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 
-//SUBMISSIONS PAGE//
+ //THEME BUTTON//
 const themeButton = document.querySelector(".theme-btn");
 const toggleTheme = () => {
-alert("test!");
 
   const body = document.querySelector("body");
   const submissionText = document.querySelector("#submissions-container");
