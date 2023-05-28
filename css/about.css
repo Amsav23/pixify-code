@@ -34,6 +34,17 @@ header {
     width: 70%;
 }
 
+.main-left a {
+    /*height: 15%;
+    width: 30%;
+    border-radius: 100px;
+    background-color: rgb(42, 59, 73);
+    color: #7fffd4;
+    letter-spacing: 1px;
+    border: none;
+    font-size: 170%;*/
+}
+
 p {
     font-size: 20px;  
 }
@@ -53,11 +64,13 @@ p {
 
 .submit-btn {
     height: 15%;
-    width: 30%;
+    width: 45%;
+    height: 280%;
     border-radius: 100px;
     background-color: rgb(42, 59, 73);
     color: #7fffd4;
     letter-spacing: 1px;
     border: none;
-    font-size: 170%;
+    font-size: 250%;
+    cursor: pointer;
 }

@@ -72,6 +72,7 @@ window.onload = function() {
 };
 */
 
+//SUBMISSION MAPPING//
 const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
   const allPhotos = list.map(item => {
@@ -96,6 +97,8 @@ window.onload = function() {
   displaySubmissions(imageSets);
 }
 
+
+//SUBMIT FORM//
 const submitBtn = document.querySelector("#submit-btn");
 
 submitBtn.addEventListener("click", (e) => {
@@ -139,6 +142,9 @@ submitBtn.addEventListener("click", (e) => {
 
 });
 
+
+
+//about//
 
 
 //let currentId;
