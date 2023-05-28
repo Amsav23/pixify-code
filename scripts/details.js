@@ -51,7 +51,7 @@ const imageSets = [
   ];
 
   let imageNumber = 0;
-  let totalImages = imageSets.filter(item => item.id == currentId);
+  //const totalImages = imageSets.filter(item => item.id == currentId);
   window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
 
@@ -67,52 +67,43 @@ const imageSets = [
         <div class="current-submission-info">
           <h2>${currentSubmission[0].title}</h2>
           <p>${currentSubmission[0].name}</p>
-          <img src=${currentSubmission[0].images[0]}</img>
-          <p class="current-number">${imageNumber +1} of ${}
-          <button onclick="togglePrevious()" id="previous-btn">Previous</button>
-          <button type="button" id="next-btn">Next</button>
+          <img id="current-image" src=${currentSubmission[0].images[0]} alt=${currentSubmission[0].name} </img>
+          <p class="currentNumber">${imageNumber +1} of ${currentSubmission[0].images.length}</p>
+          <button class="togglePrevious" id="previous-btn">Previous</button>
+          <button class="toggleNext" id="next-btn">Next</button>
         </div>
       </div>`
 
       const imageContainer = document.querySelector(".details-container");
       imageContainer.innerHTML = detailImage;
 
-  }  
+  
 
 //PREVIOUS//
+const arrayPosition = document.getElementById("current-image");
 const previousButton = document.querySelector("#previous-btn");
-const togglePrevious = () => {
-  
-  if(imageNumber <= 0) {
-  }
-
-  else {
-    imageNumber++;
-    location.reload;
-  }
-
-
-
-}
-previousButton.onclick = togglePrevious;
-
-
-
-
-//NEXT//
 const nextButton = document.querySelector("#next-btn");
-const toggleNext = () => {
-  
-  if(imageNumber >= 4) {
+
+previousButton.addEventListener("click", () => {
+  imageNumber--;
+
+  if(imageNumber < 0) {
+    imageNumber = currentSubmission[0].images.length - 1;
   }
-  
-  else {
-    imageNumber--;
-    location.reload;
+  arrayPosition.src = currentSubmission[0].images[imageNumber];
+    const currentNumber = document.querySelector(".currentNumber");
+    currentNumber.innerHTML = `${imageNumber +1} of ${currentSubmission[0].images.length}`;
+});
+
+nextButton.addEventListener("click", () => {
+  imageNumber++;
+
+  if(imageNumber >= currentSubmission[0].images.length) {
+    imageNumber = 0;
   }
+  arrayPosition.src = currentSubmission[0].images[imageNumber];
+    const currentNumber = document.querySelector(".currentNumber");
+    currentNumber.innerHTML = `${imageNumber +1} of ${currentSubmission[0].images.length}`;
+});
 
-
-
-}
-nextButton.onclick = toggleNext;
-console.log(imageNumber);
+}; 
