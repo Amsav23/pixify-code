@@ -51,17 +51,12 @@ const imageSets = [
   ];
 
   let imageNumber = 0;
-  //const totalImages = imageSets.filter(item => item.id == currentId);
   window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
 
     let currentId = urlParams.get('id');
     const currentSubmission = imageSets.filter(item => item.id == currentId);
-    console.log(currentSubmission);
 
-    
-
-    console.log(imageNumber);
 
     const detailImage = `<div class="current-submission">
         <div class="current-submission-info">
@@ -79,7 +74,7 @@ const imageSets = [
 
   
 
-//PREVIOUS//
+//PREVIOUS and NEXT//
 const arrayPosition = document.getElementById("current-image");
 const previousButton = document.querySelector("#previous-btn");
 const nextButton = document.querySelector("#next-btn");
