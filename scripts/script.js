@@ -51,27 +51,6 @@ const imageSets = [
   ];
 
 
-
-/*  function displaySubmissions() {
-    submissions.map(item => {
-        document.getElementById('submissions-container').innerHTML +=
-            `<a href="details.html?id=${item.id}">
-            <div class="submission-card">
-                <img src=${item.images[0]} alt=${item.name} class="submission-image" />
-                <div class="submission-text-container">
-                    <p class="submission-description">${item.title} - ${item.name}</p>
-                    <p class="submission-more-detail">see more</p>
-                </div>
-            </div>
-        </a>`
-    })
-}
-
-window.onload = function() {
-  displaySubmissions();
-};
-*/
-
 //SUBMISSION MAPPING//
 const displaySubmissions = (list) => {
   const submissionsContainer = document.getElementById("submissions-container");
@@ -82,16 +61,15 @@ const displaySubmissions = (list) => {
     <img src=${item.images[0]} alt=${item.name} class="photo-image" />
     </a>
     <div class="photo-info">
-      <p class="item-title">${item.title}</p>
-      <p class="item-name">${item.name}</p>
-      <p class="item-par">see more</p>
+      <p id="item-title">${item.title}</p>
+      <p id="item-name">${item.name}</p>
+      <p id="item-par">see more</p>
     </div>
     </div>`
 }).join("");
 
   submissionsContainer.innerHTML = allPhotos;
 }
-
 
 window.onload = function() {
   displaySubmissions(imageSets);
@@ -130,8 +108,6 @@ submitBtn.addEventListener("click", (e) => {
     const submissionsContainer = document.querySelector("#submissions-container");
     submissionsContainer.insertBefore(newSubmission, submissionsContainer.firstChild);
 
-
-
     document.querySelector("input[name='name']").value = "";
     document.querySelector("input[name='title']").value = "";
     document.querySelector("input[name='imageUrl-1']").value = "";
@@ -143,18 +119,27 @@ submitBtn.addEventListener("click", (e) => {
 });
 
 
+//SUBMISSIONS PAGE//
+const themeButton = document.querySelector(".theme-btn");
+const toggleTheme = () => {
+alert("test!");
 
-//about//
-
-
-//let currentId;
-//let currentTitle;
-
-//window.onload = function () {
-  //const urlParams = new URLSearchParams(window.location.search);
-  //currentId = urlParams.get('id');
-  //const currentimageSet = imageSets.filter(item => item.id == currentId);
-  //currentTitle = currentimageSet[0].title;
-//}
+  const body = document.querySelector("body");
+  const submissionText = document.querySelector("#submissions-container");
 
 
+  if(body.style.backgroundColor === "rgb(42, 59, 73)") {
+    body.style.backgroundColor = "white";
+    submissionText.style.color = "black";
+    themeButton.innerHTML = "Dark Mode";
+
+
+  } else {
+    body.style.backgroundColor = "rgb(42, 59, 73)";
+    submissionText.style.color = "white";
+    themeButton.innerHTML = "Light Mode";
+  }
+}
+
+
+themeButton.onclick = toggleTheme;

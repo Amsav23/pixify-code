@@ -50,6 +50,7 @@ const imageSets = [
 
   ];
 
+//DETAILS MAPPING//
   let imageNumber = 0;
   window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -64,8 +65,10 @@ const imageSets = [
           <p>${currentSubmission[0].name}</p>
           <img id="current-image" src=${currentSubmission[0].images[0]} alt=${currentSubmission[0].name} </img>
           <p class="currentNumber">${imageNumber +1} of ${currentSubmission[0].images.length}</p>
-          <button class="togglePrevious" id="previous-btn">Previous</button>
-          <button class="toggleNext" id="next-btn">Next</button>
+          <div class="btn-container">
+            <button class="togglePrevious" id="previous-btn">Previous</button>
+            <button class="toggleNext" id="next-btn">Next</button>
+          </div>
         </div>
       </div>`
 
