@@ -50,23 +50,69 @@ const imageSets = [
 
   ];
 
-window.onload = function() {
+  let imageNumber = 0;
+  let totalImages = imageSets.filter(item => item.id == currentId);
+  window.onload = function() {
     const urlParams = new URLSearchParams(window.location.search);
 
     let currentId = urlParams.get('id');
     const currentSubmission = imageSets.filter(item => item.id == currentId);
     console.log(currentSubmission);
 
+    
+
+    console.log(imageNumber);
+
     const detailImage = `<div class="current-submission">
         <div class="current-submission-info">
           <h2>${currentSubmission[0].title}</h2>
           <p>${currentSubmission[0].name}</p>
-          <img src=${currentSubmission[0].images}</img>
-          <button type="button" id="previous-btn">Previous</button>
+          <img src=${currentSubmission[0].images[0]}</img>
+          <p class="current-number">${imageNumber +1} of ${}
+          <button onclick="togglePrevious()" id="previous-btn">Previous</button>
           <button type="button" id="next-btn">Next</button>
         </div>
       </div>`
 
       const imageContainer = document.querySelector(".details-container");
       imageContainer.innerHTML = detailImage;
+
+  }  
+
+//PREVIOUS//
+const previousButton = document.querySelector("#previous-btn");
+const togglePrevious = () => {
+  
+  if(imageNumber <= 0) {
+  }
+
+  else {
+    imageNumber++;
+    location.reload;
+  }
+
+
+
 }
+previousButton.onclick = togglePrevious;
+
+
+
+
+//NEXT//
+const nextButton = document.querySelector("#next-btn");
+const toggleNext = () => {
+  
+  if(imageNumber >= 4) {
+  }
+  
+  else {
+    imageNumber--;
+    location.reload;
+  }
+
+
+
+}
+nextButton.onclick = toggleNext;
+console.log(imageNumber);
