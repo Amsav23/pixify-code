@@ -126,12 +126,10 @@ const toggleTheme = () => {
   const body = document.querySelector("body");
   const submissionText = document.querySelector("#submissions-container");
 
-
   if(body.style.backgroundColor === "rgb(42, 59, 73)") {
     body.style.backgroundColor = "white";
     submissionText.style.color = "black";
     themeButton.innerHTML = "Dark Mode";
-
 
   } else {
     body.style.backgroundColor = "rgb(42, 59, 73)";
@@ -139,6 +137,4 @@ const toggleTheme = () => {
     themeButton.innerHTML = "Light Mode";
   }
 }
-
-
 themeButton.onclick = toggleTheme;

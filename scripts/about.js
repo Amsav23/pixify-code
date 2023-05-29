@@ -5,13 +5,10 @@
  const mainAbout = document.querySelector(".main-about");
  const submitBorder = document.querySelector("submit-btn");
 
-
   if(body.style.backgroundColor === "rgb(42, 59, 73)") {
     body.style.backgroundColor = "white";
     mainAbout.style.color = "black";
-    //submitBorder.style.border = "initial";
     themeButton.innerHTML = "Dark Mode";
-
 
   } else {
     body.style.backgroundColor = "rgb(42, 59, 73)";
@@ -20,6 +17,4 @@
     themeButton.innerHTML = "Light Mode";
   }
 }
-
-
 themeButton.onclick = toggleTheme;
