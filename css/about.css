@@ -1,14 +1,17 @@
+/*NAV BAR*/
 .nav-right {
     margin-right: 65px;
 }
 
+/*MAIN STYLING*/
 .main-about {
     height: 100%;
+    margin: 0 60px;
 }
 
 .main-container {
     display: flex;
-    margin: 0 60px;
+    /*margin: 0 60px;*/
 }
 
 h1 {
@@ -22,7 +25,7 @@ header {
     justify-content: center;
     text-align: center;
     padding: 20px 0 100px 0;
-    margin: 0 60px;
+    /*margin: 0 60px;*/
     font-size: 20px;
 }
 
@@ -37,23 +40,27 @@ p {
     font-size: 20px;  
 }
 
+/*IMAGE STYLING*/
 .main-right {
     display: flex;
     justify-content: flex-end;
-    width: 30%;
+    max-width: 30%;
     padding-bottom: 100px;
 }
 
 .main-right img {
     border-radius: 10px;
-    height: 103%;
-    width: 95%;
+    /*height: 103%;*/
+    max-width: 95%;
+    object-fit:cover;
 }
 
+/*SUBMIT BTN*/
 .submit-btn {
     height: 15%;
-    width: 45%;
+    min-width: 45%;
     height: 280%;
+    padding: 0 20px;
     border-radius: 100px;
     background-color: rgb(42, 59, 73);
     color: #7fffd4;
@@ -61,4 +68,34 @@ p {
     border: 2px solid;
     font-size: 250%;
     cursor: pointer;
+}
+
+@media (min-width: 320px) and (max-width: 425px) {
+    nav {
+        gap: 20px;
+    }
+
+    .nav-right {
+        gap: 40px;
+    }
+
+    .main-left {
+        width: 100%;
+    }
+
+    .main-right img {
+        display: none;
+    }
+
+    .main-left a {
+        height: 20px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-left a {
+        height: 30px;
+        font-size: 10px;
+    }
 }
