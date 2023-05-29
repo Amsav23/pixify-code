@@ -70,6 +70,8 @@ p {
     cursor: pointer;
 }
 
+
+/*MEDIA QUERY STYLING*/
 @media (min-width: 320px) and (max-width: 425px) {
     nav {
         gap: 20px;

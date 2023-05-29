@@ -5,7 +5,7 @@
 }
 
 body, html {
-    height: 100%;
+    min-height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -41,19 +41,19 @@ nav {
 
 .container {
     position: relative;
-    height: 100%;
+    min-height: 100vh;
     text-align: center;
 }
 
 img {
-    height: 100%;
+    min-height: 100vh;
     width: 100%;
 }
 
 .bottom-left {
-    height: 45%;
+    font-size: 28px;
+    height: 40%;
     width: 45%;
-    font-size: 170%;
     padding: 42px;
     border-radius: 100px 100px 100px 5px;
     background-color: rgb(42, 59, 73);
@@ -75,4 +75,28 @@ img {
     border: 2px solid #7fffd4;
     font-size: 250%;
     cursor: pointer;
+}
+
+
+/*MEDIA QUERY STYLING*/
+@media (max-width: 768px) {
+    .bottom-left {
+        font-size: 16px;
+    }
+
+    .bottom-right {
+        font-size: 20px;
+        height: 70px;
+    }
+}
+
+@media (max-width: 425px) {
+    .bottom-left {
+        font-size: 10px;
+    }
+
+    .bottom-right {
+        font-size: 12px;
+        height: 50px;
+    }
 }
