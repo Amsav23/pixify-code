@@ -58,7 +58,6 @@ const imageSets = [
     let currentId = urlParams.get('id');
     const currentSubmission = imageSets.filter(item => item.id == currentId);
 
-
     const detailImage = `<div class="current-submission">
         <div class="current-submission-info">
           <h2>${currentSubmission[0].title}</h2>
@@ -75,7 +74,6 @@ const imageSets = [
       const imageContainer = document.querySelector(".details-container");
       imageContainer.innerHTML = detailImage;
 
-  
 
 //PREVIOUS and NEXT//
 const arrayPosition = document.getElementById("current-image");
@@ -126,6 +124,4 @@ nextButton.addEventListener("click", () => {
     themeButton.innerHTML = "Light Mode";
   }
 }
-
-
 themeButton.onclick = toggleTheme;
