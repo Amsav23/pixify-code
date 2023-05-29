@@ -125,15 +125,18 @@ const toggleTheme = () => {
 
   const body = document.querySelector("body");
   const submissionText = document.querySelector("#submissions-container");
+  const mainSubmissions = document.querySelector(".main-submissions");
 
   if(body.style.backgroundColor === "rgb(42, 59, 73)") {
     body.style.backgroundColor = "white";
     submissionText.style.color = "black";
+    mainSubmissions.style.color = "black";
     themeButton.innerHTML = "Dark Mode";
 
   } else {
     body.style.backgroundColor = "rgb(42, 59, 73)";
     submissionText.style.color = "white";
+    mainSubmissions.style.color = "white";
     themeButton.innerHTML = "Light Mode";
   }
 }
